@@ -9,30 +9,76 @@
     <link rel="stylesheet" href="src/css/styles.css" />
   </head>
   <body>
-    <!-- TODO need to use semantic elements -->
-    <div id="main-app">
-      <img id="main-logo" src="src/resources/googlelogo_color_272x92dp.png" />
-      <div class="main__searchbar">
-        <div class="searchbar__icon">
-          <svg
-            focusable="true"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 19 19"
-            id="search-icon"
+    <nav class="nav">
+      <ul class="nav__options">
+        <div class="nav__options nav__options--left">
+          <li class="nav__item">
+            <a class="item__icon item__icon--burguer-menu" href="#">
+              <svg
+                style="fill: #70757a; width: 24px; height: 24px"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+              </svg>
+            </a>
+          </li>
+          <li class="nav__item">
+            <a
+              class="item__button item__button--semivisible-blue-highlight"
+              href="#"
+              >ALL</a
+            >
+          </li>
+          <li class="nav__item">
+            <a
+              class="item__button item__button--semivisible-blue-highlight"
+              href="#"
+              >IMAGES</a
+            >
+          </li>
+        </div>
+        <div class="nav__options nav__options--right">
+          <li class="nav__item">
+            <a class="item__icon item__icon--square" href="#"></a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="item__button item__button--blue">Sign in</a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+    <main class="main">
+      <img
+        class="main__logo"
+        src="src/resources/googlelogo_color_272x92dp.png"
+      />
+      <form class="main__searchbar">
+        <div class="searchbar__control">
+          <div class="searchbar__icon">
+            <svg
+              focusable="true"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 19 19"
+            >
+              <path
+                d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+              ></path>
+            </svg>
+          </div>
+          <input class="searchbar__input" type="search" value="Hello world" />
+        </div>
+        <div class="searchbar__options">
+          <div class="searchbar__buttons">
+            <button>Google Search</button>
+            <button>I'm Feeling Lucky</button>
+          </div>
+          <span class="searchbar__offered-language"
+            >Google offered in: <a href="#">Groot</a></span
           >
-            <path
-              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-            ></path>
-          </svg>
         </div>
-        <div class="searchbar__input">
-          <input
-            type="search"
-            id="search-bar"
-            value="Hit Google Search if you want to see the Search Results Page"
-          />
-        </div>
-      </div>
-    </div>
+      </form>
+    </main>
   </body>
 </html>
